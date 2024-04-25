@@ -38,3 +38,6 @@ function showTask(){
     list.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+
+console.log("Hello World");
