@@ -1,0 +1,39 @@
+#clockContainer{
+    margin: auto;
+     height: 40vw;
+     width: 40vw;
+     background:  url(png-transparent-social-media-marketing-time-management-clock-clock-without-hands-angle-content-marketing-time.png) no-repeat;
+     background-size:100% ;
+     position: relative;
+}
+#hour, #minute, #second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+
+}
+#hour{
+    width: 1%;
+    height: 24%;
+    top: 25%;
+    left: 49.2%; 
+    
+    transform-origin: bottom;
+} 
+
+#minute{
+    width: 1%;
+    height: 31%;
+    top: 19%;
+    left: 49.2%;
+
+    transform-origin: bottom;
+}
+#second{
+    width: 1%;
+    height: 35%;
+    top: 15%;
+    left: 49.2%;
+    
+    transform-origin: bottom;
+}
