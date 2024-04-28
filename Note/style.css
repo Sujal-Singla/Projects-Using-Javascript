@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;   
+    background:  linear-gradient(135deg, pink, rgb(128, 179, 255));
+}
+.container{
+    padding: 10%;
+    background:  linear-gradient(135deg, pink, rgb(128, 179, 255));
+}
+h1{
+    color: white;
+}
+button{
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 0;
+    margin: 1rem 1rem 1rem 0rem;
+    background: linear-gradient(to top, purple, rgb(233, 6, 233));
+    color: white;
+    cursor: pointer;
+}
+button:active{
+    background: linear-gradient(to top, rgb(255, 41, 255), rgb(129, 2, 129));
+
+}
+.textarea{
+    position: relative;
+    width: 28rem;
+}
+textarea{
+    border-radius: 5px;
+    border: 0;
+    position: relative;
+    resize: none;
+    padding: 1rem;
+    width: 28rem;
+    height: 10rem;
+    margin: 0.7rem;
+}
+textarea:focus{
+    outline: 0;
+}
