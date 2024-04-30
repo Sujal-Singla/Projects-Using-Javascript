@@ -5,7 +5,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    height: 100vh;   
+    background-size: cover;
     background:  linear-gradient(135deg, pink, rgb(128, 179, 255));
 }
 .container{
@@ -24,6 +24,20 @@ button{
     background: linear-gradient(to top, purple, rgb(233, 6, 233));
     color: white;
     cursor: pointer;
+}
+input{
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 0;
+    margin: 1rem 1rem 1rem 0rem;
+    background: linear-gradient(to top, purple, rgb(233, 6, 233));
+    color: white;
+    cursor: pointer;
+}
+input:active{
+    background: linear-gradient(to top, rgb(255, 41, 255), rgb(129, 2, 129));
+
 }
 button:active{
     background: linear-gradient(to top, rgb(255, 41, 255), rgb(129, 2, 129));
