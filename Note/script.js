@@ -12,12 +12,8 @@ let delBtn = document.querySelector(".del");
         textfield.appendChild(text);
         textfield.appendChild(delBtn);
 
-    })
 
-
-notesContainer.addEventListener("click", function(e) {
-    if (e.target.tagName=== "BUTTON") { // corrected to "del" instead of "DEL"
-        e.target.parentElement.remove();
-        console.log("deleted");
-    }
-});
+        delBtn.addEventListener("click", ()=>{
+            textfield.remove();
+        })
+    });
