@@ -1,19 +1,40 @@
-let button = document.querySelector("input");
-let textfield = document.querySelector(".text");
-let notesContainer = document.querySelector(".container");
-let delBtn = document.querySelector(".del");
+const notesContainer = document.querySelector(".notesContainer");
+const creatBtn = document.querySelector(".btn"); 
+let notes = document.querySelectorAll(".inputBox");
 
-    button.addEventListener("click", ()=>{
+function showNotes(){
+    notesContainer.innerHTML =  localStorage.getItem("notes");
+}
+showNotes();
+function updateStorage(){
+    localStorage.setItem("notes", notesContainer.innerHTML);
+}
+creatBtn.addEventListener("click", ()=>{
+    let inputBox = document.createElement("p");
+    let img = document.createElement("img");
+    inputBox.className = "inputBox";
+    inputBox.setAttribute("contenteditable", "true");
+    img.src =  "delete.png";
+    notesContainer.appendChild(inputBox).appendChild(img);
+});
 
-        let text = document.createElement("textarea");
-        let delBtn = document.createElement("button");
-        delBtn.className = "del";
-        delBtn.innerText = "Delete";
-        textfield.appendChild(text);
-        textfield.appendChild(delBtn);
+notesContainer.addEventListener("click", function(e){
+if(e.target.tagName === "IMG"){
+    e.target.parentElement.remove();
+    updateStorage()
+}else if(e.target.tagName === "P"){
+    notes = document.querySelectorAll(".inputBox");
+    notes.forEach(nt =>{
+        nt.onkeyup = function(){
+            updateStorage()
+        }
+    })
+}
+});
 
-
-        delBtn.addEventListener("click", ()=>{
-            textfield.remove();
-        })
-    });
+document.addEventListener("keydown", event =>{
+    if(event.key === "Enter"){
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+    }
+})
